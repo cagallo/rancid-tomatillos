@@ -1,5 +1,4 @@
-import React from 'react';
-import { Component } from 'react/cjs/react.production.min';
+import React, {Component} from 'react';
 import Trailer from './Trailer';
 import apiCalls from '../apiCalls';
 import {checkResponse} from '../utilities';
@@ -24,9 +23,6 @@ class MovieView extends Component {
             .catch((error) => this.setState({error: error.message}))
     }
 
-
-
-
     render = () => { 
         console.log(this.state.trailer)  
         return (
@@ -45,8 +41,5 @@ class MovieView extends Component {
         );
     }
 }
-
-
-
 
 export default MovieView;

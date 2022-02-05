@@ -3,7 +3,7 @@ import Header from './Header';
 import MovieContainer from './MovieContainer';
 import MovieView from './MovieView';
 import apiCalls from '../apiCalls';
-import { cleanMovieData, formatAverageRating } from "../utilities.js";
+import { cleanMovieData, formatAverageRating, checkResponse} from "../utilities.js";
 import '../css/App.css';
 
 class App extends Component {
@@ -19,7 +19,7 @@ class App extends Component {
 
   componentDidMount = () => {
     apiCalls.getMovieData()
-      .then((response) => response.json())
+      .then((response) => checkResponse(response))
       .then(({ movies }) => {
         const cleanedMoviePoster = movies.map((movie) => {
           const formattedRating = formatAverageRating(movie["average_rating"]);
@@ -32,7 +32,7 @@ class App extends Component {
 
   handleClick = (id) => {
     apiCalls.getMovieData(id)
-      .then((repsonse) => repsonse.json())
+      .then((response) => checkResponse(response))
       .then(({ movie }) => {
         const cleanedMovieData = cleanMovieData(movie);
         return this.setState({ selectedMovie: { ...movie, ...cleanedMovieData }});

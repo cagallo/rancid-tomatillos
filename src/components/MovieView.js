@@ -12,7 +12,4 @@ const MovieView = (props) => {
     )
 }
 
-
-
-
 export default MovieView;

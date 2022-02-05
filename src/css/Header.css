@@ -1,0 +1,17 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-title {
+  font-size: 60px;
+  color: white;
+  margin: 0;
+  align-self: flex-end;
+}
+
+.logo {
+  width: 7%;
+  height: 7%;
+}

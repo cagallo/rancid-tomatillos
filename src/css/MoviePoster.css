@@ -1,12 +1,14 @@
 img {
   width: 100%;
   border-radius: 3px;
+  pointer-events: none;
 }
 
 h2,
 p {
   text-align: left;
   margin: 1% 1%;
+  pointer-events: none;
 }
 
 .poster-frame {

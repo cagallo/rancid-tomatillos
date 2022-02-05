@@ -4,9 +4,9 @@ import '../css/Header.css';
 
 const Header = () => {
   return (
-    <div>
-      <img src={logo} alt="Rancid Tomatillos logo" />
-      <h1>Rancid Tomatillos</h1>
+    <div className="header">
+      <img className="logo" src={logo} alt="Rancid Tomatillos logo" />
+      <h1 className="page-title">Rancid Tomatillos</h1>
     </div>
   );
 }

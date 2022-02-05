@@ -9,7 +9,7 @@ export const cleanMovieData = (movie) => {
     runtime: formatRuntime(movie.runtime),
     overview: verifyOverview(movie.overview),
     genres: verifyGenres(movie.genres),
-    average_rating: formatAverageRating(movie.['average_rating']),
+    average_rating: formatAverageRating(movie['average_rating']),
     tagline: verifyTagline(movie.tagline)
   };
 };

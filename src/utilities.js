@@ -1,6 +1,14 @@
 import dayjs from "dayjs";
 import numeral from "numeral";
 
+export const checkResponse = (response) => {
+  if(!response.ok) {
+    throw new Error('Something went wrong. Please try again!');
+  } else {
+    return response.json();
+  }
+}
+
 export const cleanMovieData = (movie) => {
   return {
     release_date: formatReleaseDate(movie['release_date']),

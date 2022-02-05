@@ -1,8 +1,6 @@
 import React from 'react';
 import '../css/MovieView.css';
 
-
-
 const MovieView = (props) => {
     return (
         <section className='movie-view'>

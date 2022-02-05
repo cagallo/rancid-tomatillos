@@ -2,26 +2,43 @@ import React, {Component} from 'react';
 import Header from './Header';
 import MovieContainer from './MovieContainer';
 import MovieView from './MovieView';
-import movieData from '../movieData';
+import apiCalls from '../apiCalls';
+import { cleanMovieData, formatAverageRating } from "../utilities.js";
 import '../css/App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      movies: movieData,
+      movies: [],
       error: "",
       isLoading: true,
       selectedMovie: ''
     };
   }
 
+  componentDidMount = () => {
+    apiCalls.getMovieData()
+      .then((response) => response.json())
+      .then(({ movies }) => {
+        const cleanedMoviePoster = movies.map((movie) => {
+          const formattedRating = formatAverageRating(movie["average_rating"]);
+          return { ...movie, average_rating: formattedRating };
+        });
+        this.setState({ movies: cleanedMoviePoster });
+      })
+      .catch((error) => this.setState({ error: error.message }));
+  };
+
   handleClick = (id) => {
-    console.log(id);
-    const currentMovie = this.state.movies.movies.find(movie=>movie.id === parseInt(id));
-    console.log(currentMovie);
-    this.setState({selectedMovie: currentMovie});
-  }
+    apiCalls.getMovieData(id)
+      .then((repsonse) => repsonse.json())
+      .then(({ movie }) => {
+        const cleanedMovieData = cleanMovieData(movie);
+        return this.setState({ selectedMovie: { ...movie, ...cleanedMovieData }});
+      })
+      .catch((error) => this.setState({ error: error.message }));
+  };
 
   render = () => {
     let currentView;

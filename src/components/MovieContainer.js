@@ -3,7 +3,7 @@ import MoviePoster from "./MoviePoster";
 import "../css/MovieContainer.css";
 
 const MovieContainer = ({ allMovies, handleClick }) => {
-  const moviePosters = allMovies.movies.map((movie) => (
+  const moviePosters = allMovies.map((movie) => (
     <MoviePoster
       key={movie.id}
       title={movie.title}
@@ -11,7 +11,6 @@ const MovieContainer = ({ allMovies, handleClick }) => {
       poster={movie.poster_path}
       id={movie.id}
       handleClick={handleClick}
-
     />
   ));
 

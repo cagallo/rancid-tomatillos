@@ -24,19 +24,25 @@ class MovieView extends Component {
     }
 
     render = () => {
-        const trailerContent = this.state.error ? <h2>{this.state.error}</h2> : <Trailer src={this.state.trailer}/>;
+        const trailerContent = this.state.error ? <h2>{this.state.error}</h2> : <Trailer className='movie-trailer' src={this.state.trailer}/>;
         return (
             <section className='movie-view'>
                 {trailerContent}
-                <img src={this.props.selectedMovie.poster_path} alt="movie poster"/>
-                <h2>{this.props.selectedMovie.title}</h2>
-                <p>{this.props.selectedMovie.average_rating}</p>
-                <p>{this.props.selectedMovie.release_date}</p>
-                <p>{this.props.selectedMovie.overview}</p>
-                <p>{this.props.selectedMovie.genre}</p>
-                <p>{this.props.selectedMovie.budget}</p>
-                <p>{this.props.selectedMovie.revenue}</p>
-                <p>{this.props.selectedMovie.runtime}</p>
+                <div className='movie-details-container'>
+                    <section className='movie-details'>
+                        <img className="single-view-poster" src={this.props.selectedMovie.poster_path} alt="movie poster"/>
+                        <div className='movie-info'>
+                            <h2>{this.props.selectedMovie.title}</h2>
+                            <p>{this.props.selectedMovie.average_rating}</p>
+                            <p>{this.props.selectedMovie.release_date}</p>
+                            <p>{this.props.selectedMovie.genre}</p>
+                            <p>{this.props.selectedMovie.budget}</p>
+                            <p>{this.props.selectedMovie.revenue}</p>
+                            <p>{this.props.selectedMovie.runtime}</p>
+                        </div>
+                    </section>
+                    <p>{this.props.selectedMovie.overview}</p>
+                </div>
             </section>
         );
     }

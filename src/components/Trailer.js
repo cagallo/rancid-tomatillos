@@ -4,8 +4,7 @@ import '../css/Trailer.css';
 const Trailer = ({src}) => {
     return (
         <iframe id="trailer"
-        height='80%'
-        width='80%'
+        className='movie-trailer'
         title="movie-trailer"
         src={src}>
         </iframe>

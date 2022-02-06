@@ -23,12 +23,12 @@ class MovieView extends Component {
             .catch((error) => this.setState({error: error.message}))
     }
 
-    render = () => { 
-        console.log(this.state.trailer)  
+    render = () => {
+        const trailerContent = this.state.error ? <h2>{this.state.error}</h2> : <Trailer src={this.state.trailer}/>;
         return (
             <section className='movie-view'>
-                <Trailer src={this.state.trailer}/>
-                {/* <img src={this.props.selectedMovie.backdrop_path} alt="movie poster"/> */}
+                {trailerContent}
+                <img src={this.props.selectedMovie.poster_path} alt="movie poster"/>
                 <h2>{this.props.selectedMovie.title}</h2>
                 <p>{this.props.selectedMovie.average_rating}</p>
                 <p>{this.props.selectedMovie.release_date}</p>

@@ -4,7 +4,6 @@
     margin: 3%;
 }
 
-
 .movie-details-container {
     display: flex;
     flex-direction: column;
@@ -14,7 +13,6 @@
 .movie-details {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-around; */
 }
 
 .single-view-title {
@@ -30,13 +28,6 @@
 .single-view-overview {
     font-size: 18px;
 }
-/* .movie-trailer {
-    flex-grow: 2;
-    border: 10px solid red;
-}  */
-
-
-
 
 .single-view-poster {
     width: 40%;

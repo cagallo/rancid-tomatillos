@@ -1,0 +1,39 @@
+.movie-view {
+    display: flex;
+    flex-direction: row;
+    margin: 3%;
+}
+
+
+.movie-details-container {
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+}
+
+.movie-details {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-around; */
+}
+
+.movie-info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+
+}
+
+/* .movie-trailer {
+    flex-grow: 2;
+    border: 10px solid red;
+}  */
+
+
+
+
+.single-view-poster {
+    width: 35%;
+    height: 90%;
+}
+

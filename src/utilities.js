@@ -24,10 +24,8 @@ export const cleanMovieData = (movie) => {
 
 const formatReleaseDate = (date) => {
   if (!date) {
-    console.log('no date', date);
     return null;
   }
-  console.log(dayjs(date).format("MMM DD, YYYY"));
   return dayjs(date).format("MMM DD, YYYY");
 };
 

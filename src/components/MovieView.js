@@ -32,7 +32,7 @@ class MovieView extends Component {
                     <section className='movie-details'>
                         <img className="single-view-poster" src={this.props.selectedMovie.poster_path} alt="movie poster"/>
                         <div className='movie-info'>
-                            <h2>{this.props.selectedMovie.title}</h2>
+                            <h2 className='single-view-title'>{this.props.selectedMovie.title}</h2>
                             <p>{this.props.selectedMovie.average_rating}</p>
                             <p>{this.props.selectedMovie.release_date}</p>
                             <p>{this.props.selectedMovie.genre}</p>
@@ -41,7 +41,8 @@ class MovieView extends Component {
                             <p>{this.props.selectedMovie.runtime}</p>
                         </div>
                     </section>
-                    <p>{this.props.selectedMovie.overview}</p>
+                    <h3>Overview</h3>
+                    <p className='single-view-overview'>{this.props.selectedMovie.overview}</p>
                 </div>
             </section>
         );

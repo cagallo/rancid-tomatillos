@@ -45,7 +45,7 @@ class App extends Component {
     if (this.state.selectedMovie) {
       currentView = <MovieView selectedMovie={this.state.selectedMovie}/>
     } else {
-      currentView=  <MovieContainer allMovies={this.state.movies} handleClick={this.handleClick}/>
+      currentView = this.state.error ? <h2>{this.state.error}</h2> : <MovieContainer allMovies={this.state.movies} handleClick={this.handleClick}/>
     }
     return (
       <section className="App">

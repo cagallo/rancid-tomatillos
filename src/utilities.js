@@ -3,7 +3,8 @@ import numeral from "numeral";
 
 export const checkResponse = (response) => {
   if(!response.ok) {
-    throw new Error('Something went wrong. Please try again!');
+    console.log(response);
+    throw new Error( `${response.status} ${response.statusText}: Unable to load content.`);
   } else {
     return response.json();
   }
@@ -26,7 +27,7 @@ const formatReleaseDate = (date) => {
   if (!date) {
     return null;
   }
-  return dayjs(date).format("MMM DD, YYYY");
+  return dayjs(date).format("MMM. DD, YYYY");
 };
 
 const formatBudget = (budget) => {

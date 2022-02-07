@@ -1,11 +1,10 @@
-img {
+.poster {
   width: 100%;
   border-radius: 3px;
   pointer-events: none;
 }
 
-h2,
-p {
+.poster-banner {
   text-align: left;
   margin: 1% 1%;
   pointer-events: none;
@@ -17,5 +16,5 @@ p {
 }
 
 .poster-frame:hover {
-  img: 1px solid white;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
 }

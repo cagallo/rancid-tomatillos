@@ -5,13 +5,13 @@
 }
 
 .page-title {
-  font-size: 60px;
+  font-size: xxx-large;
   color: white;
   margin: 0;
   align-self: flex-end;
 }
 
 .logo {
-  width: 7%;
-  height: 7%;
+  width: 100px;
+  height: 100px;
 }

@@ -1,1 +1,13 @@
 
+.App {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-page-error-message {
+  align-self: center;
+  font-size: xx-large;
+  border-bottom: 1px dashed red;
+  margin: 0 auto;
+  transform: translateY(100px);
+}

@@ -13,6 +13,7 @@ describe('Rancid Tomatillos landing page flow', () => {
         },
       ]
     })
+    
     cy.visit('http://localhost:3000')
       .get('h1')
       .contains('Rancid Tomatillos')
@@ -25,3 +26,4 @@ describe('Rancid Tomatillos landing page flow', () => {
         .contains('Money Plane');
   });
 });
+

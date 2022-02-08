@@ -2,7 +2,7 @@ import React from "react";
 import MoviePoster from "./MoviePoster";
 import "../css/MovieContainer.css";
 
-const MovieContainer = ({ allMovies, handleClick }) => {
+const MovieContainer = ({ allMovies, handlePosterClick }) => {
   const moviePosters = allMovies.map((movie) => (
     <MoviePoster
       key={movie.id}
@@ -10,7 +10,7 @@ const MovieContainer = ({ allMovies, handleClick }) => {
       rating={movie.average_rating}
       poster={movie.poster_path}
       id={movie.id}
-      handleClick={handleClick}
+      handlePosterClick={handlePosterClick}
     />
   ));
 

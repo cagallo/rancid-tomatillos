@@ -13,7 +13,7 @@ class App extends Component {
       movies: [],
       error: "",
       isLoading: true,
-      selectedMovie: ''
+      selectedMovie: {}
     };
   }
 
@@ -30,7 +30,7 @@ class App extends Component {
       .catch((error) => this.setState({ error: error.message }));
   };
 
-  handleClick = (id) => {
+  handlePosterClick = (id) => {
     apiCalls.getMovieData(id)
       .then((response) => checkResponse(response))
       .then(({ movie }) => {
@@ -42,10 +42,10 @@ class App extends Component {
 
   render = () => {
     let currentView;
-    if (this.state.selectedMovie) {
+    if (Object.keys(this.state.selectedMovie).length > 0) {
       currentView = <MovieView selectedMovie={this.state.selectedMovie}/>
     } else {
-      currentView = this.state.error ? <h2 className="landing-page-error-message">{this.state.error}</h2> : <MovieContainer allMovies={this.state.movies} handleClick={this.handleClick}/>
+      currentView = this.state.error ? <h2 className="landing-page-error-message">{this.state.error}</h2> : <MovieContainer allMovies={this.state.movies} handlePosterClick={this.handlePosterClick}/>
     }
     return (
       <section className="App">

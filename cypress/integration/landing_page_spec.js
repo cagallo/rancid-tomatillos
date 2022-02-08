@@ -18,7 +18,7 @@ describe('Rancid Tomatillos landing page flow', () => {
       .contains('Rancid Tomatillos')
       .get('.movies-container')
       .get('.poster-frame')
-      .get('img')
+      .get('.poster')
       .get('p')
         .contains('Rating: 6.6 / 10')
       .get('h2')

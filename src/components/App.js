@@ -47,16 +47,16 @@ class App extends Component {
         let [movie, videos] = [data[0], data[1].videos];
         const cleanedMovieData = cleanMovieData(movie.movie);
         if (!videos.length) {
-            return this.setState({ selectedMovie: { ...movie, ...cleanedMovieData }})
+            return this.setState({ selectedMovie: { ...movie.movie, ...cleanedMovieData }})
         }
         const key = videos.find(video => video.type === 'Trailer').key
-        this.setState(prevState => { 
-          return { 
+        this.setState(prevState => {
+          return {
             selectedMovie:  {...movie.movie, ...cleanedMovieData},
             trailer: `${prevState.trailer}${key}`,
           }
         });
-    } 
+    }
     catch(error) {
         this.setState({ error: error.message });
     }
@@ -76,8 +76,8 @@ class App extends Component {
   //         return this.setState({ selectedMovie: { ...movie, ...cleanedMovieData }})
   //       } else {
   //         key = videos.find(video => video.type === 'Trailer').key
-  //         this.setState(prevState => { 
-  //           return { 
+  //         this.setState(prevState => {
+  //           return {
   //             selectedMovie:  {...movie.movie, ...cleanedMovieData},
   //             trailer: `${prevState.trailer}${key}`,
   //           }

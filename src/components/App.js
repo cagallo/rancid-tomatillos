@@ -3,7 +3,8 @@ import Header from './Header';
 import MovieContainer from './MovieContainer';
 import MovieView from './MovieView';
 import apiCalls from '../apiCalls';
-import { cleanMovieData, formatAverageRating} from "../utilities.js";
+import { cleanMovieData, formatAverageRating } from "../utilities.js";
+import { Route } from 'react-router-dom';
 import '../css/App.css';
 
 class App extends Component {
@@ -60,7 +61,7 @@ class App extends Component {
     catch(error) {
         this.setState({ error: error.message });
     }
-}
+  }
 
 
   // handlePosterClick = (id) => {
@@ -98,6 +99,14 @@ class App extends Component {
     return (
       <section className="App">
         <Header />
+        <Route path='/movies/:id' render={({ match }) => {
+          const selectedMovie = this.state.movies.find(movie => movie.id === match.params.id)
+          return <MovieView trailer={this.state.trailer} selectedMovie={selectedMovie}/>
+        }} />
+        <Route exact path='/' render={() => {
+          {this.state.error && <h2 className="landing-page-error-message">{this.state.error}</h2>}
+          <MovieContainer allMovies={this.state.movies} handlePosterClick={this.handlePosterClick}/>
+        }} />
         {currentView}
       </section>
     );

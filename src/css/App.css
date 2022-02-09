@@ -11,3 +11,8 @@
   margin: 0 auto;
   transform: translateY(100px);
 }
+
+a {
+  text-decoration: none;
+  color: white;
+}

@@ -45,11 +45,6 @@ describe('Rancid Tomatillos selected movie flow', () => {
                 }
             ]
         })
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> main
         cy.visit('http://localhost:3000')
             .get('.poster-frame').click()
             .get('.movie-view')
@@ -69,12 +64,3 @@ describe('Rancid Tomatillos selected movie flow', () => {
                 .contains('A professional thief with $40 million in debt and his family\'s life on the line must commit one final heist - rob a futuristic airborne casino filled with the world\'s most dangerous criminals.')
     })
 });
-<<<<<<< HEAD
-=======
-
-
-
-
-
-
->>>>>>> main

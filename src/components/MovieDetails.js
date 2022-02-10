@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../css/MovieDetails.css';
 
 const MovieDetails = ({
@@ -28,6 +29,7 @@ const MovieDetails = ({
       </section>
       <h3>Overview</h3>
       {overview && <p className='single-view-overview'>{overview}</p>}
+      <Link to='/' className='back-button'>Back ▶︎</Link>
     </div>
   );
 }

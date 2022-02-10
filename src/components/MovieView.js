@@ -4,6 +4,7 @@ import { cleanMovieData } from "../utilities.js";
 import apiCalls from '../apiCalls';
 import '../css/MovieView.css';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class MovieView extends Component {
     constructor(props) {
@@ -65,3 +66,17 @@ class MovieView extends Component {
 }
 
 export default MovieView;
+
+MovieView.propTypes = {
+  selectedMovie: PropTypes.shape({
+    poster_path: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    runtime: PropTypes.number.isRequired,
+    average_rating: PropTypes.number.isRequired, 
+    release_date: PropTypes.string,
+    genre: PropTypes.string,
+    budget: PropTypes.number,
+    revenue: PropTypes.number,
+    overview: PropTypes.string
+  })
+}

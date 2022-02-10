@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/Trailer.css';\
+import '../css/Trailer.css';
 import PropTypes from 'prop-types';
 
 const Trailer = ({backdropImg, src}) => {

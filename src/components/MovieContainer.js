@@ -28,11 +28,11 @@ export default MovieContainer;
 
 
 MovieContainer.propTypes = {
-  allMovies: PropTypes.shape({
+  allMovies: PropTypes.arrayOf(PropTypes.shape({
     key: PropTypes.number,
     title: PropTypes.string,
-    rating: PropTypes.number,
+    rating: PropTypes.string,
     poster: PropTypes.string,
     id: PropTypes.number
-  })
+  }))
 }

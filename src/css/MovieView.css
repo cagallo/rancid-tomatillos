@@ -58,6 +58,11 @@ h3 {
     margin: 4% 0 0 0;
 }
 
+
+.back-button {
+    font-size: 24px;
+}
+
 @media screen and (max-width: 1400px) {
   .movie-view {
     flex-direction: column;

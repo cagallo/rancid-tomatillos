@@ -3,6 +3,7 @@ import Trailer from './Trailer';
 import { cleanMovieData } from "../utilities.js";
 import apiCalls from '../apiCalls';
 import '../css/MovieView.css';
+import { Link } from 'react-router-dom';
 
 class MovieView extends Component {
     constructor(props) {
@@ -56,6 +57,7 @@ class MovieView extends Component {
             </section>
             <h3>Overview</h3>
             {this.state.selectedMovie.overview && <p className='single-view-overview'>{this.state.selectedMovie.overview}</p>}
+            <Link to='/' className='back-button'>◀︎ Back</Link>
           </div>
         </section>
       );

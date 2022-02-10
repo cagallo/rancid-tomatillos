@@ -1,5 +1,6 @@
 import React from 'react';
-import '../css/Trailer.css';
+import '../css/Trailer.css';\
+import PropTypes from 'prop-types';
 
 const Trailer = ({backdropImg, src}) => {
   let content;
@@ -25,3 +26,14 @@ const Trailer = ({backdropImg, src}) => {
 }
 
 export default Trailer;
+
+
+Trailer.propTypes = {
+  videos: PropTypes.shape({
+    id: PropTypes.number,
+    movie_id: PropTypes.number,
+    key: PropTypes.string,
+    site: PropTypes.string,
+    type: PropTypes.string
+  })
+}

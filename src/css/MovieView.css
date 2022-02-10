@@ -61,6 +61,7 @@ h3 {
 
 .back-button {
     font-size: 24px;
+    width: 85px;
 }
 
 @media screen and (max-width: 1400px) {

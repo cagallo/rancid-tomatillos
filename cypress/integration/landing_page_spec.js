@@ -14,6 +14,9 @@ describe('Rancid Tomatillos landing page flow', () => {
       ]
     })
     cy.visit('http://localhost:3000')
+    cy.location().should((loc) => {
+      expect(loc.href).to.eq('http://localhost:3000/')
+  })
       .get('h1')
       .contains('Rancid Tomatillos')
       .get('.movies-container')

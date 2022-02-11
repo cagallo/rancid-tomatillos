@@ -1,5 +1,4 @@
-import {checkResponse} from "./utilities.js";
-
+import { checkResponse } from "./utilities";
 
 const apiCalls = {
   async getMovieData (id) {
@@ -8,11 +7,13 @@ const apiCalls = {
       url += `${id}`
     }
     let response = await fetch(url);
+      checkResponse(response);
       return await response.json();
   },
 
   async getTrailerData(id) {
-    let response = await fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
+    let response = await fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`);
+    checkResponse(response);
     return await response.json();
   }
   

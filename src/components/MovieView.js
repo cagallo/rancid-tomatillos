@@ -71,8 +71,8 @@ MovieView.propTypes = {
   selectedMovie: PropTypes.shape({
     poster_path: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    runtime: PropTypes.number.isRequired,
     average_rating: PropTypes.number.isRequired, 
+    runtime: PropTypes.number,
     release_date: PropTypes.string,
     genre: PropTypes.string,
     budget: PropTypes.number,

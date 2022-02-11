@@ -140,4 +140,51 @@ describe('Rancid Tomatillos selected movie flow', () => {
             .get('h2')
                 .contains('Money Plane');
     })
+
+    it('should return an error message if unable to load movie content', () => {
+        cy.intercept('https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
+            "movies": [
+              {
+                "id": 694919,
+                "poster_path": "https://image.tmdb.org/t/p/original//6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg",
+                "backdrop_path": "https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg",
+                "title": "Money Plane",
+                "average_rating": 6.625,
+                "release_date": "2020-09-29"
+              },
+            ]
+          })
+
+         cy.intercept('https://rancid-tomatillos.herokuapp.com/api/v2/movies/694919', (req) => {
+                req.reply({
+                  statusCode: 500,
+                  statusText: 'Internal Server Error'
+                })  
+            })
+
+
+
+        cy.intercept('https://rancid-tomatillos.herokuapp.com/api/v2/movies/694919/videos', {
+            "videos": [
+                {
+                "id": 330,
+                "movie_id": 694919,
+                "key": "aETz_dRDEys",
+                "site": "YouTube",
+                "type": "Trailer"
+                }
+            ]
+        })
+        cy.visit('http://localhost:3000')
+            .get('.poster-frame').click()
+            .get('.error-message')
+            .contains('500 Internal Server Error: Unable to load content.')
+            .get('.return-home-button')
+            .contains('Go back to main page ▶︎').click()
+
+        cy.location().should((loc) => {
+            expect(loc.href).to.eq('http://localhost:3000/')
+        })    
+     });
+
 });

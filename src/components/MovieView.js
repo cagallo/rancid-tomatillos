@@ -39,22 +39,28 @@ class MovieView extends Component {
     }
 
     render = () => {
-      const trailerContent = this.state.error ? <h2 className="error-message">{this.state.error}</h2> : <Trailer backdropImg={this.state.selectedMovie.backdrop_path} src={this.state.trailer}/>;
+      const pageContent = [
+        <Trailer backdropImg={this.state.selectedMovie.backdrop_path} src={this.state.trailer}/>,
+        <MovieDetails
+          posterPath={this.state.selectedMovie.poster_path}
+          title={this.state.selectedMovie.title}
+          runtime={this.state.selectedMovie.runtime}
+          averageRating={this.state.selectedMovie.average_rating}
+          releaseDate={this.state.selectedMovie.release_date}
+          genre={this.state.selectedMovie.genre}
+          budget={this.state.selectedMovie.budget}
+          revenue={this.state.selectedMovie.revenue}
+          overview={this.state.selectedMovie.overview}
+        />
+      ];
+      const errorMessage = [
+        <h2 className="error-message">{this.state.error}</h2>,
+        <Link to='/' className='return-home-button'>Go back to main page ▶︎</Link>
+      ]
+      const style = this.state.error ? 'error-view' : 'movie-view';
       return (
-        <section className='movie-view'>
-          {trailerContent}
-          <MovieDetails
-            posterPath={this.state.selectedMovie.poster_path}
-            title={this.state.selectedMovie.title}
-            runtime={this.state.selectedMovie.runtime}
-            averageRating={this.state.selectedMovie.average_rating}
-            releaseDate={this.state.selectedMovie.release_date}
-            genre={this.state.selectedMovie.genre}
-            budget={this.state.selectedMovie.budget}
-            revenue={this.state.selectedMovie.revenue}
-            overview={this.state.selectedMovie.overview}
-          />
-          <Link to='/' className='back-button'>◀︎ Back</Link>
+        <section className={style}>
+          {this.state.error ? errorMessage : pageContent}
         </section>
       );
     }

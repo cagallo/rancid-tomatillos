@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Trailer from './Trailer';
+import MovieDetails from './MovieDetails';
 import { cleanMovieData } from "../utilities.js";
 import apiCalls from '../apiCalls';
 import '../css/MovieView.css';
@@ -11,7 +12,7 @@ class MovieView extends Component {
         this.state = {
             selectedMovie: {},
             trailer: 'https://www.youtube.com/embed/',
-            error: '',
+            error: ''
         }
     }
 
@@ -38,27 +39,28 @@ class MovieView extends Component {
     }
 
     render = () => {
-      const trailerContent = this.state.error ? <h2 className="error-message">{this.state.error}</h2> : <Trailer backdropImg={this.state.selectedMovie.backdrop_path} src={this.state.trailer}/>;
+      const pageContent = [
+        <Trailer backdropImg={this.state.selectedMovie.backdrop_path} src={this.state.trailer}/>,
+        <MovieDetails
+          posterPath={this.state.selectedMovie.poster_path}
+          title={this.state.selectedMovie.title}
+          runtime={this.state.selectedMovie.runtime}
+          averageRating={this.state.selectedMovie.average_rating}
+          releaseDate={this.state.selectedMovie.release_date}
+          genre={this.state.selectedMovie.genre}
+          budget={this.state.selectedMovie.budget}
+          revenue={this.state.selectedMovie.revenue}
+          overview={this.state.selectedMovie.overview}
+        />
+      ];
+      const errorMessage = [
+        <h2 className="error-message">{this.state.error}</h2>,
+        <Link to='/' className='return-home-button'>Go back to main page ▶︎</Link>
+      ]
+      const style = this.state.error ? 'error-view' : 'movie-view';
       return (
-        <section className='movie-view'>
-          {trailerContent}
-          <div className='movie-details-container'>
-            <section className='movie-details'>
-              <img className="single-view-poster" src={this.state.selectedMovie.poster_path} alt="movie poster"/>
-              <div className='movie-info'>
-                <h2 className='single-view-title'>{this.state.selectedMovie.title}</h2>
-                <p>{this.state.selectedMovie.runtime}</p>
-                <p>Rating: {this.state.selectedMovie.average_rating} / 10</p>
-                {this.state.selectedMovie.release_date && <p>Release Date: {this.state.selectedMovie.release_date}</p>}
-                {this.state.selectedMovie.genre && <p>Genre: {this.state.selectedMovie.genre}</p>}
-                {this.state.selectedMovie.budget && <p>Budget: {this.state.selectedMovie.budget}</p>}
-                {this.state.selectedMovie.revenue && <p>Revenue: {this.state.selectedMovie.revenue}</p>}
-              </div>
-            </section>
-            <h3>Overview</h3>
-            {this.state.selectedMovie.overview && <p className='single-view-overview'>{this.state.selectedMovie.overview}</p>}
-            <Link to='/' className='back-button'>◀︎ Back</Link>
-          </div>
+        <section className={style}>
+          {this.state.error ? errorMessage : pageContent}
         </section>
       );
     }

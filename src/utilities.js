@@ -3,11 +3,8 @@ import numeral from "numeral";
 
 export const checkResponse = (response) => {
   if(!response.ok) {
-    console.log(response);
     throw new Error( `${response.status} ${response.statusText}: Unable to load content.`);
-  } else {
-    return response.json();
-  }
+  } 
 }
 
 export const cleanMovieData = (movie) => {

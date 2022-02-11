@@ -17,25 +17,11 @@ class App extends Component {
       trailer: 'https://www.youtube.com/embed/'
     };
   }
-
-  // componentDidMount = async () => {
-  //   apiCalls.getMovieData()
-  //     .then(({ movies }) => {
-  //       const cleanedMoviePoster = movies.map((movie) => {
-  //         const formattedRating = formatAverageRating(movie["average_rating"]);
-  //         return { ...movie, average_rating: formattedRating };
-  //       });
-  //       this.setState({ movies: cleanedMoviePoster });
-  //     })
-  //     .catch((error) => this.setState({ error: error.message }));
-  // };
   
-  componentDidMount = async () => {
+  componentDidMount = async() => {
     try { 
       let data = await apiCalls.getMovieData();
-      let movieData = data.movies;
-      console.log(typeof movieData)
-      const cleanedMoviePoster = movieData.map((movie) => {
+      const cleanedMoviePoster = data.movies.map((movie) => {
       const formattedRating = formatAverageRating(movie["average_rating"]);
       return { ...movie, average_rating: formattedRating };
       });

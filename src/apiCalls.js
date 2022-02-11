@@ -1,19 +1,20 @@
-import {checkResponse} from "./utilities.js";
-
+import { checkResponse } from "./utilities";
 
 const apiCalls = {
-  getMovieData(id) {
+  async getMovieData (id) {
     let url = "https://rancid-tomatillos.herokuapp.com/api/v2/movies/";
     if(id) {
       url += `${id}`
     }
-    return fetch(url)
-      .then((response) => checkResponse(response))
+    let response = await fetch(url);
+      checkResponse(response);
+      return await response.json();
   },
 
-  getTrailerData(id) {
-    return fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`)
-      .then((response) => checkResponse(response))
+  async getTrailerData(id) {
+    let response = await fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`);
+    checkResponse(response);
+    return await response.json();
   }
   
 };

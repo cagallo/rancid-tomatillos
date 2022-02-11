@@ -8,35 +8,35 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 class MovieView extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            selectedMovie: {},
-            trailer: 'https://www.youtube.com/embed/',
-            error: ''
-        }
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedMovie: {},
+      trailer: 'https://www.youtube.com/embed/',
+      error: ''
     }
+  }
 
-    componentDidMount = () => {
-      Promise.all([
-      apiCalls.getMovieData(this.props.id),
-      apiCalls.getTrailerData(this.props.id)
-      ])
-        .then(data => {
-          const [movie, videos] = [data[0].movie, data[1].videos];
-          const cleanedMovieData = cleanMovieData(movie);
-          if (!videos.length) {
+    componentDidMount = async() => {
+      try {
+        const requests = [apiCalls.getMovieData(this.props.id), apiCalls.getTrailerData(this.props.id)]
+        const data = await Promise.all(requests)
+        let [movie, videos] = [data[0].movie, data[1].videos];
+        const cleanedMovieData = cleanMovieData(movie);
+        if (!videos.length) {
             return this.setState({ selectedMovie: { ...movie, ...cleanedMovieData }})
+        }
+        const key = videos.find(video => video.type === 'Trailer').key
+        this.setState(prevState => {
+          return {
+            selectedMovie:  {...movie, ...cleanedMovieData},
+            trailer: `${prevState.trailer}${key}`,
           }
-          const key = videos.find(video => video.type === 'Trailer').key
-          this.setState(prevState => {
-            return {
-              selectedMovie:  {...movie, ...cleanedMovieData},
-              trailer: `${prevState.trailer}${key}`,
-            }
-          })
-        })
-        .catch((error) => this.setState({ error: error.message }));
+        });
+      }
+      catch(error) {
+          this.setState({ error: error.message });
+      }
     }
 
     render = () => {

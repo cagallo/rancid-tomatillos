@@ -18,18 +18,35 @@ class App extends Component {
     };
   }
 
-  componentDidMount = () => {
-    apiCalls.getMovieData()
-      .then(({ movies }) => {
-        const cleanedMoviePoster = movies.map((movie) => {
-          const formattedRating = formatAverageRating(movie["average_rating"]);
-          return { ...movie, average_rating: formattedRating };
-        });
-        this.setState({ movies: cleanedMoviePoster });
-      })
-      .catch((error) => this.setState({ error: error.message }));
-  };
+  // componentDidMount = async () => {
+  //   apiCalls.getMovieData()
+  //     .then(({ movies }) => {
+  //       const cleanedMoviePoster = movies.map((movie) => {
+  //         const formattedRating = formatAverageRating(movie["average_rating"]);
+  //         return { ...movie, average_rating: formattedRating };
+  //       });
+  //       this.setState({ movies: cleanedMoviePoster });
+  //     })
+  //     .catch((error) => this.setState({ error: error.message }));
+  // };
   
+  componentDidMount = async () => {
+    let movieData;
+    try { 
+      await apiCalls.getMovieData();
+      movieData = {movies};
+      const cleanedMoviePoster = movies.map((movie) => {
+      const formattedRating = formatAverageRating(movie["average_rating"]);
+      return { ...movie, average_rating: formattedRating };
+      });
+      this.setState({ movies: cleanedMoviePoster });
+    }
+    catch(error){
+
+    }
+  }
+
+
   render = () => {
     return (
       <section className="App">

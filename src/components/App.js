@@ -31,18 +31,18 @@ class App extends Component {
   // };
   
   componentDidMount = async () => {
-    let movieData;
     try { 
-      await apiCalls.getMovieData();
-      movieData = {movies};
-      const cleanedMoviePoster = movies.map((movie) => {
+      let data = await apiCalls.getMovieData();
+      let movieData = data.movies;
+      console.log(typeof movieData)
+      const cleanedMoviePoster = movieData.map((movie) => {
       const formattedRating = formatAverageRating(movie["average_rating"]);
       return { ...movie, average_rating: formattedRating };
       });
       this.setState({ movies: cleanedMoviePoster });
     }
-    catch(error){
-
+    catch(error) {
+      this.setState({ error: error.message });
     }
   }
 

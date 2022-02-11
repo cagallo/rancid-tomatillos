@@ -16,33 +16,10 @@ class MovieView extends Component {
         }
     }
 
-    // componentDidMount = () => {
-    //   Promise.all([
-    //   apiCalls.getMovieData(this.props.id),
-    //   apiCalls.getTrailerData(this.props.id)
-    //   ])
-    //     .then(data => {
-    //       const [movie, videos] = [data[0].movie, data[1].videos];
-    //       const cleanedMovieData = cleanMovieData(movie);
-    //       if (!videos.length) {
-    //         return this.setState({ selectedMovie: { ...movie, ...cleanedMovieData }})
-    //       }
-    //       const key = videos.find(video => video.type === 'Trailer').key
-    //       this.setState(prevState => {
-    //         return {
-    //           selectedMovie:  {...movie, ...cleanedMovieData},
-    //           trailer: `${prevState.trailer}${key}`,
-    //         }
-    //       })
-    //     })
-    //     .catch((error) => this.setState({ error: error.message }));
-    // }
-
-     componentDidMount = async(id) => {
+     componentDidMount = async() => {
         try {
-            const requests = [apiCalls.getMovieData(id), apiCalls.getTrailerData(id)]
+            const requests = [apiCalls.getMovieData(this.props.id), apiCalls.getTrailerData(this.props.id)]
             const data = await Promise.all(requests)
-            console.log(data)
             let [movie, videos] = [data[0].movie, data[1].videos];
             const cleanedMovieData = cleanMovieData(movie);
             if (!videos.length) {

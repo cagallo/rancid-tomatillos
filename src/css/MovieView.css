@@ -13,11 +13,24 @@
     padding: 2%;
 }
 
+.error-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+}
+
 .back-button {
     font-size: 24px;
     width: 85px;
 }
 
+.return-home-button {
+    font-size: 30px;
+    width: 312px;
+    padding: 20px;
+}
 @media screen and (max-width: 1400px) {
   .movie-view {
     flex-direction: column;

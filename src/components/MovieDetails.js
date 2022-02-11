@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/MovieDetails.css';
+import PropTypes from 'prop-types';
 
 const MovieDetails = ({
   posterPath,
@@ -35,3 +36,16 @@ const MovieDetails = ({
 }
 
 export default MovieDetails;
+
+
+MovieDetails.propTypes = {
+    poster_path: PropTypes.string,
+    title: PropTypes.string,
+    average_rating: PropTypes.number, 
+    runtime: PropTypes.string,
+    release_date: PropTypes.string,
+    genre: PropTypes.string,
+    budget: PropTypes.number,
+    revenue: PropTypes.number,
+    overview: PropTypes.string
+}

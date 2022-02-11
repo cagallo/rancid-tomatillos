@@ -29,11 +29,6 @@ export default Trailer;
 
 
 Trailer.propTypes = {
-  videos: PropTypes.shape({
-    id: PropTypes.number,
-    movie_id: PropTypes.number,
-    key: PropTypes.string,
-    site: PropTypes.string,
-    type: PropTypes.string
-  })
+  backdropImg: PropTypes.any,
+  src: PropTypes.string
 }

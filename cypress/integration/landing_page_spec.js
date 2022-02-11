@@ -39,5 +39,6 @@ describe('Rancid Tomatillos landing page flow', () => {
     cy.visit('http://localhost:3000')
     .get('.landing-page-error-message')
     .contains('404 Not Found: Unable to load content.')
-  })
+  });
+  
 });

@@ -27,4 +27,18 @@ describe('Rancid Tomatillos landing page flow', () => {
       .get('h2')
         .contains('Money Plane');
   });
+
+  it('should render error message if unable to retrieve data', () => {
+    cy.intercept('https://rancid-tomatillos.herokuapp.com/api/v2/movies', (req) => {
+     req.reply({
+       statusCode: 404,
+       statusText: 'Not Found'
+     }) 
+
+    })
+    cy.visit('http://localhost:3000')
+    .get('.landing-page-error-message')
+    .contains('404 Not Found: Unable to load content.')
+  });
+  
 });

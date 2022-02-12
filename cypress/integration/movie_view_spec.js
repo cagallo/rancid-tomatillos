@@ -66,6 +66,8 @@ describe('Rancid Tomatillos selected movie flow', () => {
             .contains('Overview')
         .get('.single-view-overview')
             .contains('A professional thief with $40 million in debt and his family\'s life on the line must commit one final heist - rob a futuristic airborne casino filled with the world\'s most dangerous criminals.')
+        .get('.back-button')
+            .contains('Back ▶︎');
     })
 
     it('should allow user to return to the landing page', () => {

@@ -4,14 +4,29 @@
   align-items: center;
 }
 
-.page-title {
-  font-size: xxx-large;
-  color: white;
-  margin: 0;
-  align-self: flex-end;
+.logo {
+  width: 600px;
+  height: 110px;
+  padding-top: 1%;
 }
 
-.logo {
-  width: 100px;
-  height: 100px;
+@media screen and (min-width: 1272px) {
+  .logo {
+    width: 800px;
+    height: 145px;
+  }
+}
+
+@media screen and (max-width: 647px) {
+  .logo {
+    width: 400px;
+    height: 75px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .logo {
+    width: 320px;
+    height: 60px;
+  }
 }

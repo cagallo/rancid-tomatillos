@@ -29,7 +29,9 @@ const MovieDetails = ({
       </section>
       <h3>Overview</h3>
       {overview && <p className='single-view-overview'>{overview}</p>}
-      <Link to='/' className='back-button'>Back ▶︎</Link>
+      <div className="back-button-container">
+        <Link to='/' className='back-button'>Back ▶︎</Link>
+      </div>
     </div>
   );
 }

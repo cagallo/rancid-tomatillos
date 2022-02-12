@@ -33,7 +33,7 @@
 }
 
 .single-view-poster {
-    width: 40%;
+    width: 25%;
     height: 95%;
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -43,20 +43,40 @@ h3 {
     margin: 4% 0 0 0;
 }
 
+.back-button-container {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.back-button {
+    font-size: 24px;
+}
+
 @media screen and (max-width: 1400px) {
   .movie-details-container {
     width: 100%;
     margin-left: 0;
     margin-top: 2%;
-    font-size: 25px
+    font-size: 2vw;
   }
 
   .movie-details-container h2 {
-    font-size: 45px;
+    font-size: 3.5vw;
   }
 
   h3 {
-    font-size: 30px;
+    font-size: 3.5vw;
     margin: 2% 0 0 0;
+  }
+
+  .single-view-overview {
+      font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .back-button {
+    font-size: 3.5vw
   }
 }

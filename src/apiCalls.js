@@ -2,7 +2,7 @@ import { checkResponse } from "./utilities";
 
 const apiCalls = {
   async getMovieData (id) {
-    let url = "http://localhost:3001/api/v1/movies/";
+    let url = "https://rancid-tomatillos.herokuapp.com/api/v2/movies/";
     if(id) {
       url += `${id}`
     }
@@ -12,7 +12,7 @@ const apiCalls = {
   },
 
   async getTrailerData(id) {
-    let response = await fetch(`http://localhost:3001/api/v1/movies/${id}/videos`);
+    let response = await fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}/videos`);
     checkResponse(response);
     return await response.json();
   }

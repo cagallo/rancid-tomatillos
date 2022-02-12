@@ -10,6 +10,14 @@
   pointer-events: none;
 }
 
+.poster-frame > h2 {
+  font-size: 2.5vw;
+}
+
+.poster-frame > p {
+  font-size: 1.2vw;
+}
+
 .poster-frame {
   padding: 3% 3% 12% 3%;
   cursor: pointer;
@@ -17,4 +25,20 @@
 
 .poster-frame:hover {
   box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (max-width: 1271px) {
+  .poster-frame > h2 {
+    font-size: 31.8px;
+  }
+
+  .poster-frame > p {
+    font-size: 17.8px;
+  }
+}
+
+@media screen and (max-width: 959px) {
+  .poster-frame > h2 {
+    font-size: 28.5px;
+  }
 }

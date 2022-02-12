@@ -106,7 +106,7 @@ describe('Rancid Tomatillos selected movie flow', () => {
           'release_date': '2020-09-29'
         },
       ]
-    })
+    });
 
     cy.visit('http://localhost:3000/694919');
     cy.wait(['@getSingleMovie', '@getSingleMovieTrailer']);

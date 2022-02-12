@@ -7,27 +7,28 @@ It's Saturday night and you want to watch a movie, but you don't know what to wa
 1. [Overview](#overview)
 2. [Installation Instructions](#installationInstructions)
 3. [Project Goals](#projectGoals)
-4. [Introduction](#introduction)
-5. [Directions and Features](#directions)
-6. [Code Architecture](#codeArchitecture)
-7. [Project Challanges](#projectChallanges)
-8. [Project Wins](#projectWins)
-9. [Technologies Used](#techUsed)
-10. [Authors](#authors)
+4. [Directions and Features](#directions)
+5. [Code Architecture](#codeArchitecture)
+6. [Project Challanges](#projectChallanges)
+7. [Project Wins](#projectWins)
+8. [Technologies Used](#techUsed)
+9. [Authors](#authors)
 
 ## Overview <a name="overview"></a>
+
+Rancid Tomatillos is a Mod 3 project at the Turing School of Software and Design that built with `create-react-app` and tested with Cypress.React, React Router and data pulled from a RESTful API were utilized to display a dashboard of movies.The user can select a movie by clicking on its poster to learn more about it.
 
 ## Installation Instructions <a name="installationInstructions"></a>
 
 1. Clone down the [Movie Data API](https://github.com/cagallo/movies-data-api)
 2. `cd` into the directory
-3. Rrun `npm install`
+3. Run `npm install`
 4. Run `npm start`
 5. You should see the message: "Movies Data is now running on http://localhost:3001" in your terminal  
-6. `cd` out of that directory then clone down [this repository](https://github.com/cagallo/overlook-hotel)
+6. `cd` out of that directory then clone down [this repository](https://github.com/cagallo/rancid-tomatillos)
 7. Run `npm install`
 8. Run `npm start` in your terminal
-9. Go to http://localhost:8080/ and you should see the website
+9. Go to http://localhost:3000/ and you should see the website
 10. Enter `control + c` in your terminal to stop the server(s) at any time.
 
 ## Project Goals <a name="projectGoals"></a>
@@ -37,9 +38,11 @@ It's Saturday night and you want to watch a movie, but you don't know what to wa
 - Practice refactoring
 - Create a multi-page UX using Router
 
-## Introduction <a name="introduction"></a>
+The project spec and rubric are [here](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
 
 ## Directions and Features <a name="directions"></a>
+
+Scroll through the main page to view all movies in the database. Click on a movie poster to view its details. Click the back button below 'Overview' to go back to the main page. 
 
 ## Code Architecture <a name="codeArchitecture"></a>
 

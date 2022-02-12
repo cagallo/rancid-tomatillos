@@ -12,7 +12,8 @@ describe('Rancid Tomatillos landing page flow', () => {
           "release_date": "2020-09-29"
         },
       ]
-    })
+    });
+    
     cy.visit('http://localhost:3000');
     cy.location().should((loc) => {
       expect(loc.href).to.eq('http://localhost:3000/');
@@ -34,7 +35,6 @@ describe('Rancid Tomatillos landing page flow', () => {
     });
 
     cy.visit('http://localhost:3000')
-      .get('.landing-page-error-message')
-      .contains('404 Not Found: Unable to load content.')
+      .get('.landing-page-error-message').contains('404 Not Found: Unable to load content.');
   });
 });

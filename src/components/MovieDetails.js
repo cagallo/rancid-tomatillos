@@ -42,11 +42,11 @@ export default MovieDetails;
 
 MovieDetails.propTypes = {
     id: PropTypes.number,
-    poster_path: PropTypes.string,
+    posterPath: PropTypes.string,
     title: PropTypes.string,
-    average_rating: PropTypes.number, 
+    averageRating: PropTypes.number,
     runtime: PropTypes.string,
-    release_date: PropTypes.string,
+    releaseDate: PropTypes.string,
     genre: PropTypes.string,
     budget: PropTypes.string,
     revenue: PropTypes.oneOfType([

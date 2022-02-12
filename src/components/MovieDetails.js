@@ -41,17 +41,17 @@ const MovieDetails = ({
 export default MovieDetails;
 
 MovieDetails.propTypes = {
-    id: PropTypes.number,
-    posterPath: PropTypes.string,
-    title: PropTypes.string,
-    averageRating: PropTypes.number,
-    runtime: PropTypes.string,
-    releaseDate: PropTypes.string,
-    genre: PropTypes.string,
-    budget: PropTypes.string,
-    revenue: PropTypes.oneOfType([
+  id: PropTypes.number,
+  posterPath: PropTypes.string,
+  title: PropTypes.string,
+  averageRating: PropTypes.number,
+  runtime: PropTypes.string,
+  releaseDate: PropTypes.string,
+  genre: PropTypes.string,
+  budget: PropTypes.string,
+  revenue: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.number,
-    ]),
-    overview: PropTypes.string
+  ]),
+  overview: PropTypes.string
 };

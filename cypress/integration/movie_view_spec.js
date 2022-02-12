@@ -31,7 +31,7 @@ describe('Rancid Tomatillos selected movie flow', () => {
                 "tagline": "",
                 "average_rating": 6.625
               }
-        })
+        }).as('getSingleMovie')
 
         cy.intercept('https://rancid-tomatillos.herokuapp.com/api/v2/movies/694919/videos', {
             "videos": [
@@ -43,10 +43,11 @@ describe('Rancid Tomatillos selected movie flow', () => {
                 "type": "Trailer"
                 }
             ]
-        })
+        }).as('getSingleMovieTrailer')
 
         cy.visit('http://localhost:3000')
             .get('.poster-frame').click()
+        cy.wait(['@getSingleMovie', '@getSingleMovieTrailer']);
         cy.location().should((loc) => {
             expect(loc.href).to.eq('http://localhost:3000/694919')
         })

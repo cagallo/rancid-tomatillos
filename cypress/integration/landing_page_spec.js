@@ -13,12 +13,11 @@ describe('Rancid Tomatillos landing page flow', () => {
         },
       ]
     })
-    cy.visit('http://localhost:3000')
+    cy.visit('http://localhost:3000');
     cy.location().should((loc) => {
-      expect(loc.href).to.eq('http://localhost:3000/')
-  })
-      .get('h1')
-      .contains('Rancid Tomatillos')
+      expect(loc.href).to.eq('http://localhost:3000/');
+    })
+      .get('.logo')
       .get('.movies-container')
       .get('.poster-frame')
       .get('.poster')
@@ -30,15 +29,14 @@ describe('Rancid Tomatillos landing page flow', () => {
 
   it('should render error message if unable to retrieve data', () => {
     cy.intercept('https://rancid-tomatillos.herokuapp.com/api/v2/movies', (req) => {
-     req.reply({
-       statusCode: 404,
-       statusText: 'Not Found'
-     }) 
+      req.reply({
+        statusCode: 404,
+        statusText: 'Not Found'
+      });
+    });
 
-    })
     cy.visit('http://localhost:3000')
-    .get('.landing-page-error-message')
-    .contains('404 Not Found: Unable to load content.')
+      .get('.landing-page-error-message')
+      .contains('404 Not Found: Unable to load content.')
   });
-  
 });

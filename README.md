@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# Rancid Tomatillos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It's Saturday night and you want to watch a movie, but you don't know what to watch? You're in luck! 'Rancid Tomatillos' is an easy-to-use web app for viewing movie posters, details and trailers.
 
-## Available Scripts
+# Table of Contents
 
-In the project directory, you can run:
+1. [Overview](#overview)
+2. [Installation Instructions](#installationInstructions)
+3. [Project Goals](#projectGoals)
+4. [Directions and Features](#directions)
+5. [Code Architecture](#codeArchitecture)
+6. [Project Challanges](#projectChallanges)
+7. [Project Wins](#projectWins)
+8. [Technologies Used](#techUsed)
+9. [Authors](#authors)
 
-### `npm start`
+## Overview <a name="overview"></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Rancid Tomatillos is a Mod 3 project at the Turing School of Software and Design that built with `create-react-app` and tested with Cypress.React, React Router and data pulled from a RESTful API were utilized to display a dashboard of movies.The user can select a movie by clicking on its poster to learn more about it.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Installation Instructions <a name="installationInstructions"></a>
 
-### `npm test`
+1. Clone down [this repository](https://github.com/cagallo/rancid-tomatillos)
+2. Run `npm install`
+3. Run `npm start` in your terminal
+4. Go to http://localhost:3000/ and you should see the website
+5. Enter `control + c` in your terminal to stop the server(s) at any time.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Project Goals <a name="projectGoals"></a>
 
-### `npm run build`
+- Gain competency with React fundamentals
+- Learn how to test React components & asynchronous JS
+- Practice refactoring
+- Create a multi-page UX using Router
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project spec and rubric are [here](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Directions and Features <a name="directions"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Scroll through the main page to view all movies in the database. Click on a movie poster to view its details. Click the back button below 'Overview' to go back to the main page. 
 
-### `npm run eject`
+## Code Architecture <a name="codeArchitecture"></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The React architecture is based on two class components (App.js, MovieView.js) and five functional components (Header.js, MovieContainer.js, MovieDetails.js, MoviePoster.js, Trailer.js). The class components holds state and are in charge of the network requests, while the functional components render information passed down as props.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Challanges <a name="projectChallanges"></a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- This was our team's first time working with the following technology and concepts, which naturally came with a learning curve as we implemented them into our project:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    - Crearting local server to access data 
+    - Implementing React and React Router
+    - Testing React components and asychronous JS using Cypress
 
-## Learn More
+## Project Wins <a name="projectWins"></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Created a fully funtional MVP with time scope of 1.5 weeks
+- Gained a strong understanding of React framework 
+- Successfully implemented asynchronous JS
+- Completed a thorough project plan and wireframe, which kept our team on track 
+- Implemented React Router for a multi-page UX
+- Gained competency with Cypress E2E testing framework
+- Utilized typechecking with PropTypes
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---------------------------------------
+## Technologies Used <a name="techUsed"></a>
 
-### Code Splitting
+- React
+- React Router
+- Javascript
+- CSS3
+- HTML5
+- Fetch API
+- webpack
+- PropTypes
+- NPM
+- Cypress
+- day.js
+- EsLint 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Authors <a name="authors"></a>
 
-### Analyzing the Bundle Size
+- [Chez Gallo](https://github.com/cagallo)
+- [Ethan Tweitmann](https://github.com/ectweitmann)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Project Manager: [Robbie Jaeger](https://github.com/robbiejaeger)

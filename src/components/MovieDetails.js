@@ -16,11 +16,11 @@ const MovieDetails = ({
   overview
 }) => {
   return (
-    <div className='movie-details-container'>
-      <section className='movie-details'>
+    <div className="movie-details-container">
+      <section className="movie-details">
         <img className="single-view-poster" src={posterPath} alt="movie poster"/>
-        <div className='movie-info'>
-          <h2 className='single-view-title'>{title}</h2>
+        <div className="movie-info">
+          <h2 className="single-view-title">{title}</h2>
           <p>{runtime}</p>
           <p>Rating: {averageRating} / 10</p>
           {releaseDate && <p>Release Date: {releaseDate}</p>}
@@ -30,13 +30,13 @@ const MovieDetails = ({
         </div>
       </section>
       <h3>Overview</h3>
-      {overview && <p className='single-view-overview'>{overview}</p>}
+      {overview && <p className="single-view-overview">{overview}</p>}
       <div className="back-button-container">
-        <Link to='/' key={id} className='back-button'>Back ▶︎</Link>
+        <Link to="/" key={id} className="back-button">Back ▶︎</Link>
       </div>
     </div>
   );
-}
+};
 
 export default MovieDetails;
 
@@ -54,4 +54,4 @@ MovieDetails.propTypes = {
     PropTypes.number,
     ]),
     overview: PropTypes.string
-}
+};

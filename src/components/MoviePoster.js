@@ -1,5 +1,6 @@
 import React from "react";
 import "../css/MoviePoster.css";
+import PropTypes from "prop-types";
 
 const MoviePoster = ({ title, rating, poster, id }) => {
   return (
@@ -11,3 +12,10 @@ const MoviePoster = ({ title, rating, poster, id }) => {
   );
 };
 export default MoviePoster;
+
+MoviePoster.propTypes = {
+    title: PropTypes.string.isRequired,
+    rating: PropTypes.string.isRequired, 
+    poster: PropTypes.string.isRequired,
+    id: PropTypes.number.isRequired,
+  };

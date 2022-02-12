@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/MovieDetails.css';
+import PropTypes from 'prop-types';
 
 const MovieDetails = ({
+  id,
   posterPath,
   title,
   runtime,
@@ -30,10 +32,26 @@ const MovieDetails = ({
       <h3>Overview</h3>
       {overview && <p className='single-view-overview'>{overview}</p>}
       <div className="back-button-container">
-        <Link to='/' className='back-button'>Back ▶︎</Link>
+        <Link to='/' key={id} className='back-button'>Back ▶︎</Link>
       </div>
     </div>
   );
 }
 
 export default MovieDetails;
+
+MovieDetails.propTypes = {
+    id: PropTypes.number,
+    poster_path: PropTypes.string,
+    title: PropTypes.string,
+    average_rating: PropTypes.number, 
+    runtime: PropTypes.string,
+    release_date: PropTypes.string,
+    genre: PropTypes.string,
+    budget: PropTypes.string,
+    revenue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    ]),
+    overview: PropTypes.string
+}

@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/Trailer.css';
+import PropTypes from 'prop-types';
 
 const Trailer = ({backdropImg, src}) => {
   let content;
@@ -25,3 +26,11 @@ const Trailer = ({backdropImg, src}) => {
 }
 
 export default Trailer;
+
+Trailer.propTypes = {
+  backdropImg: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.oneOf([undefined])
+  ]),
+  src: PropTypes.string
+};

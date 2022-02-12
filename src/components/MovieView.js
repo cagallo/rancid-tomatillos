@@ -5,6 +5,7 @@ import { cleanMovieData } from "../utilities.js";
 import apiCalls from '../apiCalls';
 import '../css/MovieView.css';
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class MovieView extends Component {
   constructor(props) {
@@ -40,8 +41,9 @@ class MovieView extends Component {
 
     render = () => {
       const pageContent = [
-        <Trailer backdropImg={this.state.selectedMovie.backdrop_path} src={this.state.trailer}/>,
-        <MovieDetails
+        <Trailer key={this.props.id + "-trailer"} backdropImg={this.state.selectedMovie.backdrop_path} src={this.state.trailer}/>,
+        <MovieDetails 
+          key={this.props.id + "-details"}
           posterPath={this.state.selectedMovie.poster_path}
           title={this.state.selectedMovie.title}
           runtime={this.state.selectedMovie.runtime}
@@ -55,7 +57,10 @@ class MovieView extends Component {
       ];
       const errorMessage = [
         <h2 className="error-message">{this.state.error}</h2>,
-        <Link to='/' className='return-home-button'>Go back to main page ▶︎</Link>
+        <Link 
+          key={this.props.id + "-error"} 
+          to='/' 
+          className='return-home-button'>Go back to main page ▶︎</Link>
       ]
       const style = this.state.error ? 'error-view' : 'movie-view';
       return (
@@ -67,3 +72,17 @@ class MovieView extends Component {
 }
 
 export default MovieView;
+
+MovieView.propTypes = {
+    selectedMovie: PropTypes.shape({
+    poster_path: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    average_rating: PropTypes.number.isRequired, 
+    runtime: PropTypes.number,
+    release_date: PropTypes.string,
+    genre: PropTypes.string,
+    budget: PropTypes.number,
+    revenue: PropTypes.number,
+    overview: PropTypes.string
+  })
+}

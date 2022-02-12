@@ -37,7 +37,7 @@ class App extends Component {
       <section className="App">
         <Header />
         <Route path='/:id' render={({ match }) => {
-          return <MovieView id={match.params.id} />
+          return <MovieView id={match.params.id}  />
         }} />
         <Route exact path='/'>
           {this.state.error && <h2 className="landing-page-error-message">{this.state.error}</h2>}

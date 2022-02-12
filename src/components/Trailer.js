@@ -27,8 +27,10 @@ const Trailer = ({backdropImg, src}) => {
 
 export default Trailer;
 
-
 Trailer.propTypes = {
-  backdropImg: PropTypes.any,
+  backdropImg: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.oneOf([undefined])
+  ]),
   src: PropTypes.string
-}
+};

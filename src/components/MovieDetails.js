@@ -4,6 +4,7 @@ import '../css/MovieDetails.css';
 import PropTypes from 'prop-types';
 
 const MovieDetails = ({
+  id,
   posterPath,
   title,
   runtime,
@@ -30,22 +31,25 @@ const MovieDetails = ({
       </section>
       <h3>Overview</h3>
       {overview && <p className='single-view-overview'>{overview}</p>}
-      <Link to='/' className='back-button'>Back ▶︎</Link>
+      <Link key={id} to='/' className='back-button'>Back ▶︎</Link>
     </div>
   );
 }
 
 export default MovieDetails;
 
-
 MovieDetails.propTypes = {
+    id: PropTypes.number,
     poster_path: PropTypes.string,
     title: PropTypes.string,
     average_rating: PropTypes.number, 
     runtime: PropTypes.string,
     release_date: PropTypes.string,
     genre: PropTypes.string,
-    budget: PropTypes.number,
-    revenue: PropTypes.number,
+    budget: PropTypes.string,
+    revenue: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+    ]),
     overview: PropTypes.string
 }

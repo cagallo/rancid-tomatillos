@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Rancid Tomatillos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+It's Saturday night and you want to watch a movie, but you don't know what to watch? You're in luck! 'Rancid Tomatillos' is an easy-to-use web app for viewing movie posters, details and trailers.
 
-## Available Scripts
+# Table of Contents
 
-In the project directory, you can run:
+1. [Overview](#overview)
+2. [Installation Instructions](#installationInstructions)
+3. [Project Goals](#projectGoals)
+4. [Introduction](#introduction)
+5. [Directions and Features](#directions)
+6. [Project Challanges](#projectChallanges)
+7. [Project Wins](#projectWins)
+8. [Technologies Used](#techUsed)
+9. [Authors](#authors)
 
-### `npm start`
+## Overview <a name="overview"></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation Instructions <a name="installationInstructions"></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone down the [Movie Data API](https://github.com/cagallo/movies-data-api)
+2. `cd` into the directory
+3. Rrun `npm install`
+4. Run `npm start`
+5. You should see the message: "Movies Data is now running on http://localhost:3001" in your terminal  
+6. `cd` out of that directory then clone down [this repository](https://github.com/cagallo/overlook-hotel)
+7. Run `npm install`
+8. Run `npm start` in your terminal
+9. Go to http://localhost:8080/ and you should see the website
+10. Enter `control + c` in your terminal to stop the server(s) at any time.
 
-### `npm test`
+## Project Goals <a name="projectGoals"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Gain competency with React fundamentals
+- Learn how to test React components & asynchronous JS
+- Practice refactoring
+- Create a multi-page UX using Router
 
-### `npm run build`
+## Introduction <a name="introduction"></a>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Directions and Features <a name="directions"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project Challanges <a name="projectChallanges"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- This was our team's first time working with the following technology and concepts, which naturally came with a learning curve as we implemented them into our project:
 
-### `npm run eject`
+    - Crearting local server to access data 
+    - Implementing React and React Router
+    - Testing React components and asychronous JS using Cypress
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Project Wins <a name="projectWins"></a>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Created a fully funtional MVP with time scope of 1.5 weeks
+- Gained a strong understanding of React framework 
+- Successfully implemented asynchronous JS
+- Completed a thorough project plan and wireframe, which kept our team on track 
+- Implemented React Router for a multi-page UX
+- Gained competency with Cypress E2E testing framework
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+---------------------------------------
+## Technologies Used <a name="techUsed"></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Authors <a name="authors"></a>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

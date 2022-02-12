@@ -20,7 +20,7 @@ class MovieView extends Component {
       try {
         const requests = [apiCalls.getMovieData(this.props.id), apiCalls.getTrailerData(this.props.id)]
         const data = await Promise.all(requests)
-        let [movie, videos] = [data[0].movie, data[1].videos];
+        let [movie, videos] = [data[0].movie, data[1]];
         const cleanedMovieData = cleanMovieData(movie);
         if (!videos.length) {
             return this.setState({ selectedMovie: { ...movie, ...cleanedMovieData }})

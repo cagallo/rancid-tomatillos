@@ -14,8 +14,8 @@ const MoviePoster = ({ title, rating, poster, id }) => {
 export default MoviePoster;
 
 MoviePoster.propTypes = {
-    title: PropTypes.string.isRequired,
-    rating: PropTypes.string.isRequired,
-    poster: PropTypes.string.isRequired,
-    id: PropTypes.number.isRequired,
-  };
+  title: PropTypes.string.isRequired,
+  rating: PropTypes.string.isRequired,
+  poster: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+};

@@ -21,10 +21,8 @@ describe('Rancid Tomatillos landing page flow', () => {
       .get('.movies-container')
       .get('.poster-frame')
       .get('.poster')
-      .get('p')
-        .contains('Rating: 6.6 / 10')
-      .get('h2')
-        .contains('Money Plane');
+      .get('p').contains('Rating: 6.6 / 10')
+      .get('h2').contains('Money Plane');
   });
 
   it('should render error message if unable to retrieve data', () => {

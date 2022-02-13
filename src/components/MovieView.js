@@ -74,6 +74,7 @@ class MovieView extends Component {
 export default MovieView;
 
 MovieView.propTypes = {
+  id: PropTypes.string,
   selectedMovie: PropTypes.shape({
     poster_path: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,

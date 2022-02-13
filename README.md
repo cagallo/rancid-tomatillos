@@ -39,6 +39,7 @@ The project spec and rubric are [here](https://frontend.turing.edu/projects/modu
 
 Scroll through the main page to view all movies in the database.
 
+![all-movies-short](https://user-images.githubusercontent.com/78453792/153780939-7df21bbb-41cf-4440-9f77-09f8e0c88773.gif)
 
 Click on a movie poster to view its details. These details may include runtime, rating, release date, budget, revenue, overview and a video trailer. Click the back button below 'Overview' to go back to the main page. 
 

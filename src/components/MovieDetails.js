@@ -44,7 +44,7 @@ MovieDetails.propTypes = {
   id: PropTypes.number,
   posterPath: PropTypes.string,
   title: PropTypes.string,
-  averageRating: PropTypes.number,
+  averageRating: PropTypes.string,
   runtime: PropTypes.string,
   releaseDate: PropTypes.string,
   genre: PropTypes.string,

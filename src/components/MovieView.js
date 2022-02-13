@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Trailer from './Trailer';
 import MovieDetails from './MovieDetails';
-import { cleanMovieData } from "../utilities.js";
+import { cleanMovieData } from '../utilities.js';
 import apiCalls from '../apiCalls';
 import '../css/MovieView.css';
 import { Link } from 'react-router-dom';
@@ -29,21 +29,20 @@ class MovieView extends Component {
       const key = videos.find(video => video.type === 'Trailer').key;
       this.setState(prevState => {
         return {
-          selectedMovie:  {...movie, ...cleanedMovieData},
+          selectedMovie: {...movie, ...cleanedMovieData},
           trailer: `${prevState.trailer}${key}`,
         };
       });
-    }
-    catch(error) {
+    } catch (error) {
       this.setState({ error: error.message });
     }
   };
 
   render = () => {
     const pageContent = [
-      <Trailer key={this.props.id + "-trailer"} backdropImg={this.state.selectedMovie.backdrop_path} src={this.state.trailer}/>,
+      <Trailer key={this.props.id + '-trailer'} backdropImg={this.state.selectedMovie.backdrop_path} src={this.state.trailer}/>,
       <MovieDetails
-        key={this.props.id + "-details"}
+        key={this.props.id + '-details'}
         posterPath={this.state.selectedMovie.poster_path}
         title={this.state.selectedMovie.title}
         runtime={this.state.selectedMovie.runtime}
@@ -56,11 +55,11 @@ class MovieView extends Component {
       />
     ];
     const errorMessage = [
-      <h2 key={this.props.id + "-error-message"} className="error-message">{this.state.error}</h2>,
+      <h2 key={this.props.id + '-error-message'} className="error-message">{this.state.error}</h2>,
       <Link
-        key={this.props.id + "-error"}
-        to='/'
-        className='return-home-button'>Go back to main page ▶︎
+        key={this.props.id + '-error'}
+        to="/"
+        className="return-home-button">Go back to main page ▶︎
       </Link>
     ];
     const style = this.state.error ? 'error-view' : 'movie-view';

@@ -17,9 +17,9 @@ class App extends Component {
       trailer: 'https://www.youtube.com/embed/'
     };
   }
-  
+
   componentDidMount = async() => {
-    try { 
+    try {
       let data = await apiCalls.getMovieData();
       const cleanedMoviePoster = data.movies.map((movie) => {
       const formattedRating = formatAverageRating(movie["average_rating"]);
@@ -30,14 +30,14 @@ class App extends Component {
     catch(error) {
       this.setState({ error: error.message });
     }
-  }
+  };
 
   render = () => {
     return (
       <section className="App">
         <Header />
         <Route path='/:id' render={({ match }) => {
-          return <MovieView id={match.params.id}  />
+          return <MovieView id={match.params.id}  />;
         }} />
         <Route exact path='/'>
           {this.state.error && <h2 className="landing-page-error-message">{this.state.error}</h2>}
@@ -45,7 +45,7 @@ class App extends Component {
         </Route>
       </section>
     );
-  }
+  };
 }
 
 export default App;

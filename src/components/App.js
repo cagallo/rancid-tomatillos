@@ -22,8 +22,8 @@ class App extends Component {
     try {
       let data = await apiCalls.getMovieData();
       const cleanedMoviePoster = data.movies.map((movie) => {
-      const formattedRating = formatAverageRating(movie['average_rating']);
-      return { ...movie, average_rating: formattedRating };
+        const formattedRating = formatAverageRating(movie['average_rating']);
+        return { ...movie, average_rating: formattedRating };
       });
       this.setState({ movies: cleanedMoviePoster });
     } catch (error) {

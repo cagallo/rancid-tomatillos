@@ -1,11 +1,11 @@
-import dayjs from "dayjs";
-import numeral from "numeral";
+import dayjs from 'dayjs';
+import numeral from 'numeral';
 
 export const checkResponse = (response) => {
-  if(!response.ok) {
+  if (!response.ok) {
     throw new Error( `${response.status} ${response.statusText}: Unable to load content.`);
-  } 
-}
+  }
+};
 
 export const cleanMovieData = (movie) => {
   return {
@@ -24,21 +24,21 @@ const formatReleaseDate = (date) => {
   if (!date) {
     return null;
   }
-  return dayjs(date).format("MMM. DD, YYYY");
+  return dayjs(date).format('MMM. DD, YYYY');
 };
 
 const formatBudget = (budget) => {
   if (!budget) {
     return null;
   }
-  return numeral(budget).format("$0,0[.]00");
+  return numeral(budget).format('$0,0[.]00');
 };
 
 const formatRevenue = (revenue) => {
   if (!revenue) {
     return null;
   }
-  return numeral(revenue).format("($0.00a)");
+  return numeral(revenue).format('($0.00a)');
 };
 
 const formatRuntime = (time) => {

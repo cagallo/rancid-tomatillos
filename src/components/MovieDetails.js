@@ -19,7 +19,7 @@ const MovieDetails = ({
   return (
     <div className="movie-details-container animate__animated animate__fadeInRight">
       <section className="movie-details">
-        <img className="single-view-poster" src={posterPath} alt="movie poster"/>
+        <img className="single-view-poster" src={posterPath} alt={`${title} poster`}/>
         <div className="movie-info">
           <h2 className="single-view-title">{title}</h2>
           <p>{runtime}</p>

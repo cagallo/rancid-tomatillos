@@ -16,7 +16,7 @@ It's Saturday night and you want to watch a movie, but you don't know what to wa
 
 ## Overview <a name="overview"></a>
 
-Rancid Tomatillos is a Mod 3 project at the Turing School of Software and Design that built with `create-react-app` and tested with Cypress.React, React Router and data pulled from a RESTful API were utilized to display a dashboard of movies.The user can select a movie by clicking on its poster to learn more about it.
+Rancid Tomatillos is a Mod 3 project at the Turing School of Software and Design that built with `create-react-app` and  React Router and data pulled from a RESTful API were utilized to display a dashboard of movies. The user can select a movie by clicking on its poster to learn more about it. 
 
 ## Installation Instructions <a name="installationInstructions"></a>
 
@@ -74,7 +74,9 @@ The React architecture is based on two class components (App.js, MovieView.js) a
 - PropTypes
 - NPM
 - Cypress
+- numeral 
 - day.js
+- animate.css
 - EsLint 
 
 ## Authors <a name="authors"></a>

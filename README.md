@@ -1,6 +1,6 @@
 # Rancid Tomatillos
 
-It's Saturday night and you want to watch a movie, but you don't know what to watch? You're in luck! 'Rancid Tomatillos' is an easy-to-use web app for viewing movie posters, details and trailers.
+It's Saturday night and you want to watch a movie, but you don't know what to watch? You're in luck! 'Rancid Tomatillos' is an easy-to-use web application for viewing movie posters, details and trailers.
 
 # Table of Contents
 
@@ -16,7 +16,7 @@ It's Saturday night and you want to watch a movie, but you don't know what to wa
 
 ## Overview <a name="overview"></a>
 
-Rancid Tomatillos is a Mod 3 project at the Turing School of Software and Design that was built with `create-react-app` and tested using Cypress. React, React Router and data pulled from a RESTful API were utilized to display a dashboard of movies. The user can select a movie by clicking on its poster to learn more about it. 
+Rancid Tomatillos is a Mod 3 project at the Turing School of Software and Design that was built with `create-react-app` and tested using Cypress. React, React Router and data pulled from a RESTful API were utilized to display a dashboard of movies. The user can select a single movie by clicking on its poster to learn more about it. 
 
 ## Installation Instructions <a name="installationInstructions"></a>
 
@@ -37,7 +37,13 @@ The project spec and rubric are [here](https://frontend.turing.edu/projects/modu
 
 ## Directions and Features <a name="directions"></a>
 
-Scroll through the main page to view all movies in the database. Click on a movie poster to view its details. These details may include runtime, rating, release date, budget, revenue, overview and a video trailer. Click the back button below 'Overview' to go back to the main page. 
+Scroll through the main page to view all movies in the database.
+
+
+Click on a movie poster to view its details. These details may include runtime, rating, release date, budget, revenue, overview and a video trailer. Click the back button below 'Overview' to go back to the main page. 
+
+![single movie](https://user-images.githubusercontent.com/78453792/153780667-77c00142-c85c-463c-9b8b-eb1104f36b44.gif)
+
 
 ## Code Architecture <a name="codeArchitecture"></a>
 

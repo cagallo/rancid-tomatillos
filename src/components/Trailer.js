@@ -1,5 +1,6 @@
 import React from 'react';
 import '../css/Trailer.css';
+import 'animate.css';
 import PropTypes from 'prop-types';
 
 const Trailer = ({backdropImg, src}) => {
@@ -19,7 +20,7 @@ const Trailer = ({backdropImg, src}) => {
     </iframe>;
   }
   return (
-    <div className="trailer-container">
+    <div className="trailer-container animate__animated animate__backInRight">
       {content}
     </div>
   );

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../css/MovieDetails.css';
+import 'animate.css';
 import PropTypes from 'prop-types';
 
 const MovieDetails = ({
@@ -16,7 +17,7 @@ const MovieDetails = ({
   overview
 }) => {
   return (
-    <div className="movie-details-container">
+    <div className="movie-details-container animate__animated animate__fadeInRight">
       <section className="movie-details">
         <img className="single-view-poster" src={posterPath} alt="movie poster"/>
         <div className="movie-info">

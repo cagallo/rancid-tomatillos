@@ -2,6 +2,7 @@ import React from 'react';
 import MoviePoster from './MoviePoster';
 import { Link } from 'react-router-dom';
 import '../css/MovieContainer.css';
+import 'animate.css';
 import PropTypes from 'prop-types';
 
 const MovieContainer = ({ allMovies }) => {
@@ -18,7 +19,7 @@ const MovieContainer = ({ allMovies }) => {
   });
 
   return (
-    <div className="movies-container">
+    <div className="movies-container animate__animated animate__fadeInUpBig">
       {moviePosters}
     </div>
   );

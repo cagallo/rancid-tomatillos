@@ -47,7 +47,7 @@ Click on a movie poster to view its details. These details may include runtime, 
 
 ## Code Architecture <a name="codeArchitecture"></a>
 
-The React architecture is based on two class components (App.js, MovieView.js) and five functional components (Header.js, MovieContainer.js, MovieDetails.js, MoviePoster.js, Trailer.js). The class components holds state and are in charge of the network requests, while the functional components render information passed down as props.
+The React architecture is based on two class components (App.js, MovieView.js) and five functional components (Header.js, MovieContainer.js, MovieDetails.js, MoviePoster.js, Trailer.js). The class components hold state and are in charge of the network requests, while the functional components render information passed down as props.
 
 ## Project Challanges <a name="projectChallanges"></a>
 

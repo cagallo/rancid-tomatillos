@@ -6,24 +6,24 @@ const Trailer = ({backdropImg, src}) => {
   let content;
   if (src === 'https://www.youtube.com/embed/') {
     content = <img
-      className='movie-trailer'
+      className="movie-trailer"
       src={backdropImg}
-      alt='movie content'
+      alt="movie content"
     />;
   } else {
     content = <iframe
       id="trailer"
-      className='movie-trailer'
+      className="movie-trailer"
       title="movie-trailer"
       src={src}>
-    </iframe>
+    </iframe>;
   }
   return (
-      <div className='trailer-container'>
+    <div className="trailer-container">
       {content}
-      </div>
+    </div>
   );
-}
+};
 
 export default Trailer;
 

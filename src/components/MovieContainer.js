@@ -1,8 +1,8 @@
-import React from "react";
-import MoviePoster from "./MoviePoster";
-import { Link } from "react-router-dom";
-import "../css/MovieContainer.css";
-import PropTypes from "prop-types";
+import React from 'react';
+import MoviePoster from './MoviePoster';
+import { Link } from 'react-router-dom';
+import '../css/MovieContainer.css';
+import PropTypes from 'prop-types';
 
 const MovieContainer = ({ allMovies }) => {
   const moviePosters = allMovies.map((movie) => {
@@ -14,7 +14,7 @@ const MovieContainer = ({ allMovies }) => {
         poster={movie.poster_path}
         id={movie.id}
       />
-    </Link>
+    </Link>;
   });
 
   return (
@@ -33,4 +33,4 @@ MovieContainer.propTypes = {
     poster: PropTypes.string,
     id: PropTypes.number
   }))
-}
+};

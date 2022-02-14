@@ -2,7 +2,7 @@
 
 It's Saturday night and you want to watch a movie, but you don't know what to watch? You're in luck! 'Rancid Tomatillos' is an easy-to-use web application for viewing movie posters, details and trailers.
 
-Fully deployed app [HERE](https://rancid-tomatillos2110.herokuapp.com/)
+Fully deployed application: [Rancid Tomatillos](https://rancid-tomatillos2110.herokuapp.com/)
 
 # Table of Contents
 

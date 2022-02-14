@@ -89,9 +89,13 @@ The React architecture is based on two class components (App.js, MovieView.js) a
 
 ## Testing
 
-Cypress was utlized for E2E and integration testing. To test the application: run `npm run cypress` and you will have a window open that gives you the ability to click on each test and see whether they pass. Make sure you've run `npm start` in a separate terminal tab before you begin the testing. 
+Cypress was used for E2E and integration testing. To test the application: run `npm run cypress` and you will have a window open that gives you the ability to click on each test and see whether they pass. Make sure you've run `npm start` in a separate terminal tab before you begin the testing. 
 
 ![Screen Shot 2022-02-13 at 5 06 58 PM](https://user-images.githubusercontent.com/78453792/153781475-60b0e3b7-13d8-4aea-b5dc-e36417927d1f.png)
+
+Example of a successful test:
+
+![successful-test](https://user-images.githubusercontent.com/78453792/153781621-9737b6c6-1518-4eaa-b96a-cf32b75be04c.gif)
 
 ## Authors <a name="authors"></a>
 

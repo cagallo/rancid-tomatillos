@@ -87,7 +87,7 @@ The React architecture is based on two class components (App.js, MovieView.js) a
 - animate.css
 - EsLint 
 
-## Testing
+## Testing <a name="testing"></a>
 
 Cypress was used for E2E and integration testing. To test the application: run `npm run cypress` and you will have a window open that gives you the ability to click on each test and see whether they pass. Make sure you've run `npm start` in a separate terminal tab before you begin the testing. 
 

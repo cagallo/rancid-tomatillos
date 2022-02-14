@@ -1,7 +1,17 @@
 .movies-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 24%));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 24%));
   grid-gap: 12px;
   justify-content: center;
   padding: 18px;
+}
+
+@media screen and (max-width: 430px) {
+  .movies-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    grid-gap: 12px;
+    justify-content: center;
+    padding: 18px;
+  }
 }

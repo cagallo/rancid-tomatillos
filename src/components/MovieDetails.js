@@ -5,7 +5,7 @@ import 'animate.css';
 import PropTypes from 'prop-types';
 
 const MovieDetails = ({
-  id,
+  id,   
   posterPath,
   title,
   runtime,

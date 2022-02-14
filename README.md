@@ -2,6 +2,8 @@
 
 It's Saturday night and you want to watch a movie, but you don't know what to watch? You're in luck! 'Rancid Tomatillos' is an easy-to-use web application for viewing movie posters, details and trailers.
 
+Fully deployed app [HERE](https://rancid-tomatillos2110.herokuapp.com/)
+
 # Table of Contents
 
 1. [Overview](#overview)
@@ -56,9 +58,9 @@ The React architecture is based on two class components (App.js, MovieView.js) a
 
 - This was our team's first time working with the following technology and concepts, which naturally came with a learning curve as we implemented them into our project:
 
-    - Creating local server to access data 
     - Implementing React and React Router
     - Testing React components and asychronous JS using Cypress
+    - Deploying app using Heroku 
 
 ## Project Wins <a name="projectWins"></a>
 

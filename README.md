@@ -11,12 +11,13 @@ It's Saturday night and you want to watch a movie, but you don't know what to wa
 5. [Code Architecture](#codeArchitecture)
 6. [Project Challanges](#projectChallanges)
 7. [Project Wins](#projectWins)
-8. [Technologies Used](#techUsed)
-9. [Authors](#authors)
+8. [Testing](#testing)
+9. [Technologies Used](#techUsed)
+10. [Authors](#authors)
 
 ## Overview <a name="overview"></a>
 
-Rancid Tomatillos is a Mod 3 project at the Turing School of Software and Design that was built with `create-react-app` and tested using Cypress. React, React Router and data pulled from a RESTful API were utilized to display a dashboard of movies. The user can select a single movie by clicking on its poster to learn more about it. Additionally, the user will find Rancid Tomatillos to be a responsively designed application that they can use on many different screen sizes. 
+Rancid Tomatillos is a Mod 3 project at the Turing School of Software and Design that was built with `create-react-app` and tested using Cypress. React, React Router and data pulled from a RESTful API were utilized to display a dashboard of movies. The user can select a single movie by clicking on its poster to learn more about it. Additionally, the user will find Rancid Tomatillos to be a responsively designed application that they may use on many different screens. 
 
 ## Installation Instructions <a name="installationInstructions"></a>
 
@@ -41,7 +42,7 @@ Scroll through the main page to view all movies in the database. Each movie's ti
 
 ![all-movies-short](https://user-images.githubusercontent.com/78453792/153780939-7df21bbb-41cf-4440-9f77-09f8e0c88773.gif)
 
-Click on a movie poster to view its details. These details may include runtime, rating, release date, budget, revenue, overview and a video trailer. Click the back button below 'Overview' to go back to the main page. 
+Click on a movie poster to view its details. These details may include runtime, rating, release date, budget, revenue, overview and an embedded video trailer. Click the back button below 'Overview' to go back to the main page. 
 
 ![single movie](https://user-images.githubusercontent.com/78453792/153780667-77c00142-c85c-463c-9b8b-eb1104f36b44.gif)
 
@@ -85,6 +86,12 @@ The React architecture is based on two class components (App.js, MovieView.js) a
 - day.js
 - animate.css
 - EsLint 
+
+## Testing
+
+Cypress was utlized for E2E and integration testing. To test the application: run `npm run cypress` and you will have a window open that gives you the ability to click on each test and see whether they pass. Make sure you've run `npm start` in a separate terminal tab before you begin the testing. 
+
+![Screen Shot 2022-02-13 at 5 06 58 PM](https://user-images.githubusercontent.com/78453792/153781475-60b0e3b7-13d8-4aea-b5dc-e36417927d1f.png)
 
 ## Authors <a name="authors"></a>
 

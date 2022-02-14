@@ -11,9 +11,10 @@ It's Saturday night and you want to watch a movie, but you don't know what to wa
 5. [Code Architecture](#codeArchitecture)
 6. [Project Challanges](#projectChallanges)
 7. [Project Wins](#projectWins)
-8. [Testing](#testing)
-9. [Technologies Used](#techUsed)
-10. [Authors](#authors)
+8. [Technologies Used](#techUsed)
+9. [Testing](#testing)
+10. [Future Iterations](#futureIterations)
+11. [Authors](#authors)
 
 ## Overview <a name="overview"></a>
 
@@ -96,6 +97,12 @@ Cypress was used for E2E and integration testing. To test the application: run `
 Example of a successful test:
 
 ![successful-test](https://user-images.githubusercontent.com/78453792/153781621-9737b6c6-1518-4eaa-b96a-cf32b75be04c.gif)
+
+## Future Iterations <a name="futureIterations"></a>
+
+- A login page for users where they could store movies to a watchlist or favorites and could add their ratings 
+- A search bar to quickly filter a movie by title 
+- An option for users to sort movies by rating or filter by genre
 
 ## Authors <a name="authors"></a>
 
